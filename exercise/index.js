@@ -72,6 +72,13 @@ app.get("/friends/:name", (req, res)=>{
     }
 })
 
+app.get("/year", (req, res)=>{
+    const { age } = req.query;
+    const year = 2020;
+    const calcAge = year - parseInt(age, 10);
+    res.send(`you were born in ${calcAge}`)
+})
+
 
 app.get("*", (req, res)=>{
     res.send(`<h1>404-Page Not Found!!!!</h1>`)

@@ -11,8 +11,9 @@ const server = http.createServer(app); // use app to handle server requests
 
 // homepage route
 app.get('/', (req, res) => {
+  const name = req.query.name || "World"
   // sends back html h1 tag
-  res.send('<h1>Hello World</h1>')
+  res.send(`<h1>Hello, ${name}</h1>`)
 })
 
 // about page
