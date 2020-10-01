@@ -71,7 +71,7 @@ app.get("/friends/:name", (req, res)=>{
         `)
     }
 })
-
+// query----------------------------
 app.get("/year", (req, res)=>{
     const { age } = req.query;
     const year = 2020;
